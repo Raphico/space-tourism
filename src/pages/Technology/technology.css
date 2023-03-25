@@ -1,0 +1,91 @@
+.numbered-buttons {
+  justify-content: center;
+}
+
+.numbered-button {
+  cursor: pointer;
+  padding-inline: 1.2rem;
+  border: 1px solid hsl(var(--clr-secondary));
+  aspect-ratio: 1;
+  background: transparent;
+  border-radius: 50%;
+  transition: background 300ms ease-in-out;
+}
+
+.numbered-button:hover,
+.numbered-button:focus,
+.numbered-button.current {
+  background-color: hsl(var(--clr-secondary));
+  color: hsl(var(--clr-primary));
+}
+
+@media (max-width: 34em) {
+  .technology-info {
+    margin-top: 12.5rem;
+  }
+}
+
+@media (max-width: 52em) {
+  .technology-info {
+    text-align: center;
+  }
+
+  .technology-info {
+    order: 2;
+    flex-direction: column;
+  }
+
+  .technology-img-container {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    order: 1;
+  }
+
+  .technology-img-container img {
+    width: 100%;
+  }
+
+  .title {
+    margin-bottom: 3rem;
+  }
+
+  .numbered-buttons {
+    margin-bottom: 1rem;
+  }
+
+  .description, .technology-title {
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 34em)
+and (max-width: 52em) {
+  .title {
+    margin-bottom: 4rem;
+  }
+
+  .technology-info {
+    margin-top: 25rem;
+  }
+}
+
+@media (min-width: 52em) {
+  .technology-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technology-img-container {
+    position: absolute;
+    top: 10rem;
+    right: 0;
+  }
+
+  .technology-info {
+    --gap: 2rem;
+  }
+
+  .numbered-buttons {
+    flex-direction: column;
+  }
+}

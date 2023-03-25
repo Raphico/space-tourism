@@ -1,0 +1,88 @@
+.dotted-button {
+  cursor: pointer;
+  border: 0;
+  padding-inline: 5px;
+  aspect-ratio: 1;
+  outline: 0;
+  background-color: hsl(var(--clr-secondary) / 0.17);
+  border-radius: 50%;
+  transition: background 300ms ease-in-out;
+}
+
+.dotted-button:hover,
+.dotted-button:focus,
+.dotted-button.current {
+  background-color: hsl(var(--clr-secondary));
+}
+
+.bar {
+  width: 100%;
+  height: 1px;
+  background-color: #383B4B;
+}
+
+.role-name-bio > * + * {
+  margin-top: 1rem;
+}
+
+.role {
+  color: hsl(var(--clr-secondary) / 0.5)
+}
+
+@media (max-width: 34em) {
+  .dotted-buttons {
+    grid-row-start: 1;
+  }
+
+  .crew-img-container {
+    grid-row: 1;
+    margin-block: 2rem;
+  }
+}
+
+@media (max-width: 52em) {
+  .crews {
+    text-align: center;
+  }
+
+  .bio {
+    margin-inline: auto;
+  }
+
+  .crew-img-container {
+    display: grid;
+    place-items: center;
+  }
+
+  .dotted-buttons {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 34em)
+and (max-width: 52em) {
+  .title {
+    margin-bottom: 3.5rem;
+  }
+
+  .dotted-buttons {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 52em) {
+  .title, .role-name-bio {
+    margin-bottom: 6rem;
+  }
+
+  .crew-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .crew-img-container {
+    position: absolute;
+    top: 10rem;
+    right: 5rem;
+  }
+
+}

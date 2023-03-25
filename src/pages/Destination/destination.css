@@ -1,0 +1,88 @@
+.destinations {
+  --gap: 4rem;
+}
+
+.destination-navigation {
+  margin-bottom: 1.5rem;
+  --gap: 1.5rem;
+}
+
+.destination {
+  position: relative;
+  cursor: pointer;
+}
+
+.destination::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  transition: width 300ms ease-in-out;
+  background-color: hsl(var(--clr-secondary));
+}
+
+.destination:hover::after,
+.destination:focus::after,
+.destination.current::after {
+  width: 100%;
+}
+
+.distance-travel {
+  font-size: var(--fs-300);
+  text-transform: uppercase;
+  color: hsl(var(--clr-accent));
+}
+
+.bar {
+  width: 100%;
+  height: 1px;
+  background-color: #383B4B;
+}
+
+.details {
+  justify-content: center;
+  --gap: 10rem;
+}
+
+@media (max-width: 52em) {
+  .destination-navigation {
+    justify-content: center;
+  }
+
+  .destination-content {
+    text-align: center;
+  }
+
+  .destination-img {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .description {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 34em) {
+  .details {
+    flex-direction: column;
+    --gap: 2rem;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 52em) {
+  .destinations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .destination-content {
+    place-self: center;
+  }
+}
