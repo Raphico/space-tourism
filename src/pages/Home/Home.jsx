@@ -13,10 +13,9 @@ function Home() {
         <h1 className="fs-900 uppercase">Space</h1>
         <p className="text-accent">
           Let’s face it; if you want to go to space, 
-          you might as well genuinely go to outer space 
-          and not hover kind of on the edge of it. 
-          Well sit back, and relax because we’ll 
-          give you a truly out of this world experience!
+          you might as well commit and not hover on the outskirts. 
+          Well sit back, and relax because we shall
+          give you a unique otherworldly experience!
         </p>
       </div>
 
