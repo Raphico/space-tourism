@@ -33,7 +33,7 @@ function Destination() {
   useEffect(() => {
     destinations.forEach(async({ name, images, description, distance, travel }) => {
       if (name !== currentDestination) return
-      const imgSrc = await import(`${images.png}/* @vite-ignore */`)
+      const imgSrc = await import(`${images.png}`)
       setDestinationInfo({
         img: imgSrc.default,
         description,

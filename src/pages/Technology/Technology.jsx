@@ -33,7 +33,7 @@ function Technology() {
       if (name !== currentTechnology) return
       
       const mediaQuery = "(min-width: 52em)"
-      const imgSrc = await import(`${images[window.matchMedia(mediaQuery).matches ? 'portrait' : 'landscape']}/* @vite-ignore */`);
+      const imgSrc = await import(`${images[window.matchMedia(mediaQuery).matches ? 'portrait' : 'landscape']}`);
 
       setTechnologyInfo({
         name,
