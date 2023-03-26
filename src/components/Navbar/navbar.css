@@ -14,7 +14,7 @@
   border: 0;
   z-index: 10;
   background: transparent;
-  background-image: url("../../assets/icon-hamburger.svg");
+  background-image: url("/icon-hamburger.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@
 }
 
 .mobile-menu-toggle[data-visible="true"] {
-  background-image: url("../../assets/icon-close.svg");
+  background-image: url("/icon-close.svg");
 }
 
 .nav-link {

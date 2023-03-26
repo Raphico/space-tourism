@@ -10,11 +10,11 @@ function Technology() {
   const [currentTechnology, setCurrentTechnology] = useState(firstTechnology)
   const [technologyInfo, setTechnologyInfo] = useState({
     name: "",
-    img: "",
+    image: "",
     description: ""
   })
 
-  const { name, img, description } = technologyInfo
+  const { name, image, description } = technologyInfo
 
   const numberedButtons = technologies.map(({ name, number }) => 
     <button 
@@ -33,11 +33,13 @@ function Technology() {
       if (name !== currentTechnology) return
       
       const mediaQuery = "(min-width: 52em)"
-      const imgSrc = await import(`${images[window.matchMedia(mediaQuery).matches ? 'portrait' : 'landscape']}`);
+      const imgSrc = `${images[window.matchMedia(mediaQuery).matches ? 'portrait' : 'landscape']}`;
+
+      console.log(imgSrc)
 
       setTechnologyInfo({
         name,
-        img: `.${imgSrc.default}`,
+        image: imgSrc,
         description
       })
     })
@@ -71,7 +73,7 @@ function Technology() {
           </div>
 
           <div className="technology-img-container">
-            <img src={img} alt={`${currentTechnology} image`} />
+            <img src={image} alt={`${currentTechnology} image`} />
           </div>
         </div>
       </div>

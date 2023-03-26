@@ -10,12 +10,12 @@ function Crew() {
   const [currentCrew, setCurrentCrew] = useState(firstCrew)
   const [crewInfo, setCrewInfo] = useState({
     name: "",
-    img: "",
+    image: "",
     role: "",
     bio: ""
   })
 
-  const { name, img, role, bio } = crewInfo
+  const { name, image, role, bio } = crewInfo
 
   const dottedButtons = crews.map(({ name }) => 
     <button 
@@ -31,10 +31,9 @@ function Crew() {
   useEffect(() => {
     crews.forEach(async({ name, images, role, bio }) => {
       if (name !== currentCrew) return 
-      const imgSrc = await import(images.png)
       setCrewInfo({
         name,
-        img: `.${imgSrc.default}`,
+        image: images.webp,
         role,
         bio
       })
@@ -70,7 +69,7 @@ function Crew() {
         </div>
 
         <div className="crew-img-container">
-          <img src={img} alt={`${currentCrew} image`} />
+          <img src={image} alt={`${currentCrew} image`} />
           <div className="bar"></div>
         </div>
       </div>

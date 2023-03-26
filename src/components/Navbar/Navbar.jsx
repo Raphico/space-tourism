@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
-import logo from "../../assets/logo.svg"
 import { navItems } from "../../constants"
 import "./navbar.css"
 
@@ -36,7 +35,7 @@ function Navbar() {
   return (
     <nav className="nav flex">
       <div>
-        <img src={logo} alt="space tourism logo"/>
+        <img src="/logo.svg" alt="space tourism logo"/>
       </div>
 
       <button 

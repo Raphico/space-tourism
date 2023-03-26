@@ -33,18 +33,14 @@ function Destination() {
   useEffect(() => {
     destinations.forEach(async({ name, images, description, distance, travel }) => {
       if (name !== currentDestination) return
-      const imgSrc = await import(`${images.webp}`)
       setDestinationInfo({
-        image: `.${imgSrc.default}`,
+        image: images.webp,
         description,
         distance,
         travel
       })
     })
   }, [currentDestination])
-
-
-  console.log(image)
 
   return (
     <motion.div 
