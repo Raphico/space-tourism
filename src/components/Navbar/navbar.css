@@ -29,7 +29,7 @@
   position: relative;
   font-family: var(--ff-barlow-condensed);
   font-size: var(--fs-400);
-  color: hsl(var(--clr-secondary));
+  color: hsl(var(--clr-accent));
   text-transform: uppercase;
   --gap: 0.5rem;
 }
@@ -41,7 +41,7 @@
   width: 0%;
   height: 2px;
   transition: width 300ms ease-in-out;
-  background-color: hsl(var(--clr-secondary));
+  background-color: hsl(var(--clr-accent));
 }
 
 .nav-link:hover::after,
@@ -71,6 +71,7 @@
       background-color: hsl(var(--clr-secondary) / 0.05);
       backdrop-filter: blur(1.5rem);
     }
+    
   }
 
   .primary-navigation[aria-expanded="true"] {
@@ -100,12 +101,6 @@
       backdrop-filter: blur(1.5rem);
     }
   } 
-
-  @media not all and (backdrop-filter: blur(1.5rem)) {
-    .nav-link {
-      color: hsl(var(--clr-primary));
-    }
-  }
 
   .nav {
     padding-top: 2rem;
