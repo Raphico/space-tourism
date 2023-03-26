@@ -29,7 +29,7 @@
   position: relative;
   font-family: var(--ff-barlow-condensed);
   font-size: var(--fs-400);
-  color: hsl(var(--clr-accent));
+  color: hsl(var(--clr-secondary));
   text-transform: uppercase;
   --gap: 0.5rem;
 }
@@ -41,7 +41,7 @@
   width: 0%;
   height: 2px;
   transition: width 300ms ease-in-out;
-  background-color: hsl(var(--clr-accent));
+  background-color: hsl(var(--clr-secondary));
 }
 
 .nav-link:hover::after,
@@ -55,7 +55,7 @@
     position: fixed;
     z-index: 1;
     inset: 0 0 0 30%;
-    background-color: hsl(var(--clr-secondary) / 0.95);
+    background-color: hsl(var(--clr-primary) / 0.95);
     padding-top: 7rem;
     padding-inline-start: 1.5rem;
     transform: translateX(100%);
@@ -68,7 +68,7 @@
 
   @supports(backdrop-filter: blur(1.5rem)) {
     .primary-navigation {
-      background-color: hsl(var(--clr-secondary) / 0.05);
+      background-color: hsl(var(--clr-primary) / 0.95);
       backdrop-filter: blur(1.5rem);
     }
     
