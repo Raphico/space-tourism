@@ -55,8 +55,7 @@
     position: fixed;
     z-index: 1;
     inset: 0 0 0 30%;
-    background-color: hsl(var(--clr-secondary));
-    color: red;
+    background-color: hsl(var(--clr-secondary) / 0.95);
     padding-top: 7rem;
     padding-inline-start: 1.5rem;
     transform: translateX(100%);
@@ -99,6 +98,12 @@
     .primary-navigation {
       background-color: hsl(var(--clr-secondary) / 0.05);
       backdrop-filter: blur(1.5rem);
+    }
+  } 
+
+  @media not all and (backdrop-filter: blur(1.5rem)) {
+    .nav-link {
+      color: hsl(var(--clr-primary));
     }
   }
 
