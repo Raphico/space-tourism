@@ -37,7 +37,7 @@ function Technology() {
 
       setTechnologyInfo({
         name,
-        img: imgSrc.default,
+        img: `.${imgSrc.default}`,
         description
       })
     })

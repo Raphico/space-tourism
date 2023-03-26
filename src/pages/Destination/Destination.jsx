@@ -4,19 +4,18 @@ import { destinations } from "../../constants"
 import "./destination.css"
 import { motion } from "framer-motion"
 import { fadeIn } from "../../utils/motion"
-import imageLo from "../../assets/background-crew-mobile.jpg"
 
 function Destination() {
   const firstDestination = destinations[0].name
   const [currentDestination, setCurrentDestination] = useState(firstDestination)
   const [destinationInfo, setDestinationInfo] = useState({
-    img: "",
+    image: "",
     description: "",
     distance: "",
     travel: ""
   })
 
-  const { img, description, distance, travel } = destinationInfo
+  const { image, description, distance, travel } = destinationInfo
 
   const destinationNavigation = destinations.map(({ name }) => 
     <li 
@@ -34,15 +33,18 @@ function Destination() {
   useEffect(() => {
     destinations.forEach(async({ name, images, description, distance, travel }) => {
       if (name !== currentDestination) return
-      const imgSrc = await import(`${images.png}`)
+      const imgSrc = await import(`${images.webp}`)
       setDestinationInfo({
-        img: imgSrc.default,
+        image: `.${imgSrc.default}`,
         description,
         distance,
         travel
       })
     })
   }, [currentDestination])
+
+
+  console.log(image)
 
   return (
     <motion.div 
@@ -58,7 +60,7 @@ function Destination() {
         </div>
 
         <div className="destination-img">
-          <img src={img} alt={`${currentDestination} image`} />
+          <img src={image} alt={`${currentDestination} image`} />
         </div>
       </div>
 

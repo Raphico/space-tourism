@@ -31,10 +31,10 @@ function Crew() {
   useEffect(() => {
     crews.forEach(async({ name, images, role, bio }) => {
       if (name !== currentCrew) return 
-      const imgSrc = await import(`${images.png}`)
+      const imgSrc = await import(images.png)
       setCrewInfo({
         name,
-        img: imgSrc.default,
+        img: `.${imgSrc.default}`,
         role,
         bio
       })
