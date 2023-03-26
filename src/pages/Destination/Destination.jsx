@@ -4,6 +4,7 @@ import { destinations } from "../../constants"
 import "./destination.css"
 import { motion } from "framer-motion"
 import { fadeIn } from "../../utils/motion"
+import imageLo from "../../assets/background-crew-mobile.jpg"
 
 function Destination() {
   const firstDestination = destinations[0].name
