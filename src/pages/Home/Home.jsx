@@ -20,7 +20,7 @@ function Home() {
       </div>
 
       <div>
-        <Link to="#"
+        <Link to="/destination"
         className="explore bg-secondary text-primary fs-600 uppercase letter-spacing-1">explore</Link>
       </div>
     </motion.div>
