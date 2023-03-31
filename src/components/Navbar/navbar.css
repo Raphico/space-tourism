@@ -51,7 +51,7 @@
 }
 
 .primary-navigation {
-  background-color: hsl(var(--clr-primary) / 0.95);
+  background-color: hsl(var(--clr-primary) / 0.2);
 }
 
 @supports(backdrop-filter: blur(1.5rem)) {
