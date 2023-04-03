@@ -9,13 +9,12 @@ import Crew from "./pages/Crew/Crew"
 import Technology from "./pages/Technology/Technology"
 import NotFound from "./pages/NotFound"
 import Navbar from "./components/Navbar/Navbar"
-import BackgroundImg from "./components/BackgroundImg"
-import { motion } from "framer-motion"
+import BackgroundSetter from "./components/BackgroundSetter"
 
 function App() {
   return (
     <Router>
-      <BackgroundImg>
+      <BackgroundSetter>
         <Navbar />
         <div className="container">
           <Routes>
@@ -26,7 +25,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-      </BackgroundImg>
+      </BackgroundSetter>
     </Router>
   )
 }
