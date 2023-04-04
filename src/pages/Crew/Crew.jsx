@@ -1,6 +1,6 @@
 import "./crew.css"
 import NumberedTitle from "../../components/NumberedTitle"
-import { useEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react"
 import { crews } from "../../constants"
 import { motion } from "framer-motion"
 import { fadeIn } from "../../utils/motion"
@@ -28,7 +28,7 @@ function Crew() {
     </button>
   )
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     crews.forEach(async({ name, images, role, bio }) => {
       if (name !== currentCrew) return 
       setCrewInfo({

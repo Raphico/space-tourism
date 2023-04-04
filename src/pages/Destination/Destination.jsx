@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react"
 import NumberedTitle from "../../components/NumberedTitle"
 import { destinations } from "../../constants"
 import "./destination.css"
@@ -30,7 +30,7 @@ function Destination() {
     </li>
   )
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     destinations.forEach(async({ name, images, description, distance, travel }) => {
       if (name !== currentDestination) return
       setDestinationInfo({

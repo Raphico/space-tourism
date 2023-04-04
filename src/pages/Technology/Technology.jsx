@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useLayoutEffect, useState } from "react"
 import NumberedTitle from "../../components/NumberedTitle"
 import { technologies } from "../../constants"
 import "./technology.css"
@@ -28,7 +28,7 @@ function Technology() {
     </button>
   )
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     technologies.forEach(async({ name, images, description }) => {
       if (name !== currentTechnology) return
       
